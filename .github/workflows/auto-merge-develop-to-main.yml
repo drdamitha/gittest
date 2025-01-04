@@ -1,0 +1,32 @@
+name: automerge from develop to main branch
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config user.name "drdamitha"
+          git config user.email "drdamitha@gmail.com"
+
+      - name: Fetch from the main branch
+        run: |
+          git fetch origin main
+
+      - name: Merge develop into main
+        run: |
+          git checkout main
+          git merge origin/develop --no-ff -m "Auto merge from CI pipeline"
+
+      - name: Push changes to main
+        run: |
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
