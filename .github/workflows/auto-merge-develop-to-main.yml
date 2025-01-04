@@ -18,7 +18,7 @@ jobs:
 
       - name: Fetch from the main branch
         run: |
-          git fetch origin main
+          git pull origin main
 
       - name: Merge develop into main
         run: |
