@@ -23,7 +23,7 @@ jobs:
       - name: Merge develop into main
         run: |
           git checkout main
-          git merge origin/develop --no-ff -m "Auto merge from CI pipeline"
+          git merge origin/develop --allow-unrelated-histories --no-ff -m "Auto merge from CI pipeline"
 
       - name: Push changes to main
         run: |
