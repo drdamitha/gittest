@@ -1,2 +1,1 @@
-## CI/CD Basics
-Detailed CI/CD documentation
+Main branch edit: CI/CD Overview
