@@ -3,3 +3,4 @@ CI flow2
 CI flow3
 CIflow4
 CIflow5
+CIflow6
