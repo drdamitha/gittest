@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeaAssist • Tea Farmer Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar glass">
+      <div class="brand">
+        <div class="brand-mark">🍃</div>
+        <span>TeaAssist</span>
+      </div>
+      <button id="openChat" class="btn btn-primary">Open Chatbot</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <p class="badge">🌿 Your Smart Farming Companion</p>
+          <h1>Tea Farmer Assistant Bot</h1>
+          <p>
+            Get expert advice for fertilizer plans, disease management, weather response,
+            and market price decisions — all in one integrated chat experience.
+          </p>
+
+          <div class="quick-cards">
+            <article>
+              <h3>🪴 Smart Advice</h3>
+              <p>Better crop decisions</p>
+            </article>
+            <article>
+              <h3>🛡️ Disease Alerts</h3>
+              <p>Protect your plants early</p>
+            </article>
+            <article>
+              <h3>🌦️ Weather Info</h3>
+              <p>Plan field work safely</p>
+            </article>
+            <article>
+              <h3>💰 Market Prices</h3>
+              <p>Sell with confidence</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="chatWidget" class="chat-widget hidden">
+      <div class="chat-header">
+        <div>
+          <strong>Hi! I'm TeaAssist</strong>
+          <p>Ask me anything about your tea farm.</p>
+        </div>
+        <button id="closeChat" class="icon-btn">✕</button>
+      </div>
+
+      <div id="chatLog" class="chat-log"></div>
+
+      <div id="suggestions" class="suggestions"></div>
+
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Ask about fertilizer, pests, weather..." required />
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </aside>
+
+    <button id="floatingChat" class="floating-chat">🤖</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
